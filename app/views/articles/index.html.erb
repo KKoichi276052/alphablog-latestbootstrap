@@ -6,7 +6,7 @@
     <div class="row justify-content-md-center">
       <div class="col-8 mt-4">
         <div class="card text-center shadow mb-5 bg-white rounded">
-          <div class="card-header fst-italic">by user name</div>
+          <div class="card-header fst-italic"><%= article.user.username if article.user %></div>
           <div class="card-body">
             <h5 class="card-title"><%= article.title %></h5>
             <p class="card-text">

@@ -1,4 +1,4 @@
-<% if @article.errors.any? %>
+<% if obj.errors.any? %>
   <div class="alert alert-danger alret-dismissable fade show" role="alert">
   
     <div class="d-flex justify-content-between">
@@ -8,7 +8,7 @@
         
 
     <ul>
-      <% @article.errors.full_messages.each do |msg| %>
+      <% obj.errors.full_messages.each do |msg| %>
       <li><%= msg %></li>
       <% end %>
     </ul>

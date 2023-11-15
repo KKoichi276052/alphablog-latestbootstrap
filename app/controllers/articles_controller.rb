@@ -1,11 +1,11 @@
 class ArticlesController < ApplicationController
   before_action :set_article, only: [:show, :edit, :update, :destroy]
-  
+
   def index
-    @articles = Article.all
+    @articles = Article.paginate(page: params[:page], per_page: 5)
   end
 
-  def show 
+  def show
     # debugger
   end
 
@@ -15,12 +15,12 @@ class ArticlesController < ApplicationController
   def new
     @article = Article.new
   end
-  
+
   def create
     @article = Article.new(article_params)
     @article.user = User.first
     if @article.save
-      redirect_to @article 
+      redirect_to @article
     else
       render 'new', status: :unprocessable_entity
     end

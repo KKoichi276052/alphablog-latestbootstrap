@@ -79,3 +79,6 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
 end
+
+gem 'will_paginate-bootstrap-style'
+gem 'will_paginate', '~> 4.0'

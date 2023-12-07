@@ -1,18 +1,10 @@
+<% flash.each do |name, msg| %>
 <div class="container">
-
-  <% flash.each do |name, msg| %>
-    <div class="alert alert-<%= name == "notice" ? "success" : "danger" %> alter-dismissable fade show" role="alert">
-    <div class="d-flex justify-content-between">
-    <%= msg %>
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
-
+  <div class="alert alert-<%= name == "notice" ? "success" : "danger" %> alter-dismissable fade show" role="alert">
+      <div class="d-flex justify-content-between">
+      <%= msg %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
   </div>
-
-  <% end %> 
-
 </div
-
-
-
-
+<% end %> 

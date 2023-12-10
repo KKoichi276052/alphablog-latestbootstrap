@@ -6,7 +6,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag "application" %>
     <%= javascript_importmap_tags %>
   </head>
 
@@ -15,9 +15,14 @@
     <%= render 'layouts/navigation' %>
 
     <div id="page-content">
+
+
       <%= render 'layouts/messages' %>
+
       <%= yield %>
+      
     </div>
+    
     <%= render 'layouts/footer' %>
   </body>
 </html>

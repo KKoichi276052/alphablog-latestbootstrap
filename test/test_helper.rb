@@ -9,5 +9,9 @@ class ActiveSupport::TestCase
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
 
+  def sign_as_user(user)
+    post login_path, params: { session: { emial: user.email, password: "password"} }
+  end
+
   # Add more helper methods to be used by all tests here...
 end

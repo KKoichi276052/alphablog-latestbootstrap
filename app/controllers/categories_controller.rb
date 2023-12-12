@@ -10,8 +10,7 @@ class CategoriesController < ApplicationController
       flash[:notice] = "Category successfully created"
       redirect_to @category
     else
-      flash[:error] = "Something went wrong"
-      render 'new'
+      render 'new', status: :unprocessable_entity
     end
   end
 

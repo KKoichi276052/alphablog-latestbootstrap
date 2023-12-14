@@ -1,4 +1,7 @@
   <h2 class="text-center mt-4"><%= @article.title %></h2>
+      <% if @article.categories.any? %>
+        <div class="mt-2 text-center"><%= render @article.categories %></div>
+      <% end %>
 
   <div class="container">
     <div class="row justify-content-center">
@@ -9,6 +12,7 @@
             <%= @article.user.username if @article.user %>
             <%= link_to gravator_for(@article.user), user_path(@article.user) %>
           </div>
+
           <div class="card-body">
             <div class="card-text"><%= simple_format(@article.description, align: "left") %></div>
             <% if logged_in? && (@article.user == current_user || current_user.admin?) %>

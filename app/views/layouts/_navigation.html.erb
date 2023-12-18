@@ -48,7 +48,7 @@
             <% if logged_in? && current_user.admin? %>
               <%= link_to "Create new categories", new_category_path, class: "dropdown-item"%>
             <% end %>
-              <%= link_to "View all categories", articles_path, class: "dropdown-item"%>
+              <%= link_to "View all categories", categories_path, class: "dropdown-item"%>
           </div>
         </li>
         <% if logged_in? %>
